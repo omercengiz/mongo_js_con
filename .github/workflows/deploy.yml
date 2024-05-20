@@ -40,3 +40,4 @@ jobs:
         run: |        
           echo "Deploying use $MONGODB_USERNAME"
           echo "MONGO_DB_NAME: $MONGODB_DB_NAME"
+          echo "MONGO_DB_NAME: $MONGODB_DB_NAME"
