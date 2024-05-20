@@ -9,11 +9,10 @@ env:
   MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
   MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
   MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+  MONGODB_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
+  PORT: 8080
 jobs:
   test:
-    env:
-      MONGODB_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
-      PORT: 8080
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
