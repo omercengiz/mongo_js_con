@@ -6,14 +6,15 @@ on:
       - main
       - dev
 env:
-  MONGO_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
   MONGODB_DB_NAME: shipment_db
-  MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-  MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
-  PORT: 8080
 jobs:
   test:
-    environment: testing
+    env:
+      MONGODB_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
+      MONGODB_DB_NAME: shipment_db
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+      PORT: 8080
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -38,6 +39,5 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          echo "Deploying use ${{ env.MONGODB_USERNAME }}"
-          echo "Deploying use ${{ env.MONGODB_PASSWORD }}"
-          echo "Deploying use $MONGODB_DB_NAME"
+          echo "Deploying use $MONGODB_USERNAME"
+          echo "MONGO_DB_NAME: $MONGODB_DB_NAME"
