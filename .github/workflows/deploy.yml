@@ -7,7 +7,7 @@ on:
       - dev
 env:
   MONGO_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
-  MONGODB_DB_NAME: Demo
+  MONGODB_DB_NAME: shipment_db
   MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
   MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
   PORT: 8080
