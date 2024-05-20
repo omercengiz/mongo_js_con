@@ -11,7 +11,6 @@ env:
   MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
   MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
   PORT: ${{ secrets.PORT }}
-
 jobs:
   test:
     environment: testing
@@ -31,14 +30,13 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Output information
-        run: echo "..."
+        run: echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |        
-          echo "Deploying to ${{ env.MONGO_CLUSTER_ADDRESS }}"
           echo "Deploying use ${{ env.MONGODB_USERNAME }}"
           echo "Deploying use ${{ env.MONGODB_PASSWORD }}"
           echo "Deploying use $MONGODB_DB_NAME"
