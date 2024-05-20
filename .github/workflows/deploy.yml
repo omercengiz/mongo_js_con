@@ -6,11 +6,11 @@ on:
       - main
       - dev
 env:
-  MONGO_CLUSTER_ADDRESS: ${{ secrets.MONGO_CLUSTER_ADDRESS }}
-  MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+  MONGO_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
+  MONGODB_DB_NAME: Demo
   MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
   MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
-  PORT: ${{ secrets.PORT }}
+  PORT: 8080
 jobs:
   test:
     environment: testing
