@@ -13,7 +13,6 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: demo.70bmu5v.mongodb.net
-      MONGODB_DB_NAME: shipment_db
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
