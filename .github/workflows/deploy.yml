@@ -37,4 +37,7 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          echo "..."
+          echo "Deploying to ${{ env.MONGO_CLUSTER_ADDRESS }}"
+          echo "Deploying use ${{ env.MONGODB_USERNAME }}"
+          echo "Deploying use ${{ env.MONGODB_PASSWORD }}"
+          echo "Deploying use $MONGODB_DB_NAME"
